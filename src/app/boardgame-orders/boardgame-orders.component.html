@@ -1,0 +1,8 @@
+<div *ngIf="currentOrders.length > 0">
+    <h3>Shopping cart</h3>
+    <ul class="child" class="list-group">
+        <li *ngFor="let boardgameorder of currentOrders" class="list-group-item" >
+        {{ boardgameorder.boardgame.name }}
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,29 @@
+<img [src]="boardGameForDetails.image_url" width="150" height="150"><br>
+<b>Title:</b> {{ boardGameForDetails.name }}<br>
+<b>Number of players:</b> {{boardGameForDetails.min_players}}-{{boardGameForDetails.max_players}}<br>
+<b>Duration:</b> {{boardGameForDetails.min_playtime}}-{{boardGameForDetails.max_playtime}} minutes<br>
+<br>
+<b>Price:</b>{{ boardGameForDetails.price }} <br><br>
+
+<input type="text" #txtComment>
+<button (click)="giveComment(txtComment.value)">
+    Give comment
+</button>
+
+<br><br>
+
+<button (click)="addRate(1)">
+    <span class="material-symbols-outlined">thumb_up</span>
+</button>
+
+<button (click)="addRate(-1)">
+    <span class="material-symbols-outlined">thumb_down</span>
+</button>
+
+&nbsp;&nbsp;&nbsp;
+
+<button (click)="order(boardGameForDetails)">
+    <span class="material-symbols-outlined">
+        add_shopping_cart
+        </span>
+</button>
